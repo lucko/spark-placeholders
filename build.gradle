@@ -1,0 +1,26 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'java-library'
+
+    group = 'me.lucko.spark.placeholders'
+    version = '1.0-SNAPSHOT'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url('https://repo.lucko.me/') }
+        maven { url('https://hub.spigotmc.org/nexus/content/repositories/snapshots/') }
+    }
+
+    dependencies {
+        compileOnly 'me.lucko:spark-api:0.1-SNAPSHOT'
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+}

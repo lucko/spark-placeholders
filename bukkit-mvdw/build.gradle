@@ -1,0 +1,10 @@
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT'
+    compileOnly 'be.maximvdw:MVdWPlaceholderAPI:3.0.1-SNAPSHOT', {
+        exclude group: 'be.maximvdw', module: 'MVdWUpdater'
+    }
+}
+
+jar {
+    archiveBaseName = 'spark-placeholders-bukkit-mvdw'
+}

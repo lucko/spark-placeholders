@@ -1,0 +1,8 @@
+name: SparkMVdWHook
+version: 1.0
+description: Provides placeholders for spark
+author: Luck
+website: https://github.com/lucko/spark-placeholders
+main: me.lucko.spark.placeholders.SparkMVdWHook
+depend: [MVdWPlaceholderAPI]
+softdepend: [spark]
